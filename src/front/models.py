@@ -47,7 +47,7 @@ class Blog(models.Model):
     description = models.CharField(max_length=1000, blank=False, null=False)
     image = models.ImageField(upload_to='images/', blank=False, null=False)
     posted_at = models.DateField(blank=False, null=False)
-    author = models.ForeignKey(blank=False, null=True, on_delete=models.SET_NULL)
+    author = models.ForeignKey(Author, blank=False, null=True, on_delete=models.SET_NULL)
     stars = models.SmallIntegerField(
         blank=False, null=False, default=1,
         choices=[
