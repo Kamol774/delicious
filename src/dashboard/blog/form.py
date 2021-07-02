@@ -1,6 +1,6 @@
 from django import forms
 
-from delicious.src.front.models import Blog
+from front.models import Blog
 
 
 class BlogForm(forms.ModelForm):
