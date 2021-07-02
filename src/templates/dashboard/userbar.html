@@ -10,7 +10,7 @@
                                     <img src="{% static 'images/icon/avatar-01.jpg' %}" alt="John Doe" />
                                 </div>
                                 <div class="content">
-                                    <a class="js-acc-btn" href="#">{{user.username}}</a>
+                                    <a class="js-acc-btn" href="#">user.username</a>
                                 </div>
                                 <div class="account-dropdown js-dropdown">
                                     <div class="info clearfix">
@@ -21,9 +21,9 @@
                                         </div>
                                         <div class="content">
                                             <h5 class="name">
-                                                <a href="#">{{user.username}}</a>
+                                                <a href="#">user.username</a>
                                             </h5>
-                                            <span class="email">{{user.email}}</span>
+                                            <span class="email">user.email</span>
                                         </div>
                                     </div>
                                     <div class="account-dropdown__body">
@@ -41,7 +41,7 @@
                                         </div>
                                     </div>
                                     <div class="account-dropdown__footer">
-                                        <a href="{% url 'logout_page'%}">
+                                        <a href="#">
                                             <i class="zmdi zmdi-power"></i>Logout</a>
                                     </div>
                                 </div>
