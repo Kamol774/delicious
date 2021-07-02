@@ -14,7 +14,7 @@ def recipe_create(request):
         'model': model,
         'form': form,
     }
-    return render(request, "dashboard/recipe/form.html", ctx)
+    return render(request, "dashboard/recipes/form.html", ctx)
 
 
 def recipe_list(request):
@@ -22,7 +22,7 @@ def recipe_list(request):
     ctx = {
         "recipes": recipes
     }
-    return render(request, "dashboard/recipe/list.html", ctx)
+    return render(request, "dashboard/recipes/list.html", ctx)
 
 
 def recipe_edit(request, pk):
@@ -37,7 +37,7 @@ def recipe_edit(request, pk):
         'model': model,
         'form': form
     }
-    return render(request, 'dashboard/recipe/form.html', ctx)
+    return render(request, 'dashboard/recipes/form.html', ctx)
 
 
 def recipe_delete(request, pk):
