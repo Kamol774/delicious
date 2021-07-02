@@ -1,2 +1,4 @@
-def contact(requests):
-    return None
+from django.shortcuts import render
+
+def contact(request):
+    return render(request, 'contact.html')
