@@ -1,5 +1,5 @@
-from delicious.src.dashboard.blog.form import BlogForm
-from delicious.src.front.models import Blog
+from .form import BlogForm
+from front.models import Blog
 from django.shortcuts import render, redirect
 
 
