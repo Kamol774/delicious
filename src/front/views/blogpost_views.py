@@ -7,4 +7,4 @@ def blog_post(request):
     ctx = {
         "blogs": blog
     }
-    return render(request, 'blog-post.html', ctx)
+    return render(request, 'front/blog-post.html', ctx)
