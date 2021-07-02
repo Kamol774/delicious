@@ -8,7 +8,7 @@ def blog_list(request):
     ctx = {
         "blogs": blog
     }
-    return render(request, "blog/list.html", ctx)
+    return render(request, "dashboard/blog/list.html", ctx)
 
 
 def blog_create(request):
@@ -22,7 +22,7 @@ def blog_create(request):
         "model": model,
         "form": form
     }
-    return render("blog/form.html", ctx)
+    return render("dashboard/blog/form.html", ctx)
 
 
 def blog_edit(request, pk):
@@ -36,7 +36,7 @@ def blog_edit(request, pk):
         "model": model,
         "form": form
     }
-    return render("blog/form.html", ctx)
+    return render("dashboard/blog/form.html", ctx)
 
 
 def blog_delete(request, pk):

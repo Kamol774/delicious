@@ -4,7 +4,7 @@ from django.db import models
 class Recipe(models.Model):
     title = models.CharField(max_length=150, blank=False, null=False)
     description = models.CharField(max_length=150, blank=False, null=False)
-    image = models.ImageField(upload_to='images/', blank=False, null=False)
+    image = models.ImageField(upload_to='images/', blank=False, null=True)
     prep_time = models.CharField(max_length=150, blank=False, null=False)
     cook_time = models.CharField(max_length=150, blank=False, null=False)
     posted_at = models.DateField(auto_now_add=True, blank=False, null=False)
@@ -46,7 +46,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=150, blank=False, null=False)
     short_description = models.CharField(max_length=1000, blank=False, null=False)
     description = models.CharField(max_length=1000, blank=False, null=False)
-    image = models.ImageField(upload_to='images/', blank=False, null=False)
+    image = models.ImageField(upload_to='images/', blank=False, null=True)
     posted_at = models.DateField(blank=False, null=False)
     author = models.ForeignKey(Author, blank=False, null=True, on_delete=models.SET_NULL)
     stars = models.SmallIntegerField(
