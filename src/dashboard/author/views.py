@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from now.delicious.src.dashboard.author.form import AuthorsForm
-from now.delicious.src.front.models import Author
+from dashboard.author.form import AuthorsForm
+from front.models import Author
 
 
 def authors_create(request):
@@ -14,7 +14,7 @@ def authors_create(request):
         'model': model,
         'form': form
     }
-    return render(request, 'authors/form.html', ctx)
+    return render(request, 'dashboard/authors/form.html', ctx)
 
 
 def authors_list(request):
@@ -22,7 +22,7 @@ def authors_list(request):
     ctx = {
         'authors': authors
     }
-    return render(request, 'authors/list.html', ctx)
+    return render(request, 'dashboard/authors/list.html', ctx)
 
 def authors_edit(request, pk):
     model = Author.objects.get(pk=pk)
@@ -35,7 +35,7 @@ def authors_edit(request, pk):
         "model": model,
         "form": form
     }
-    return render(request, 'authors/form.html', ctx)
+    return render(request, 'dashboard/authors/form.html', ctx)
 
 
 def authors_delete(request, pk):

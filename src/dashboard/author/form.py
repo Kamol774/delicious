@@ -1,5 +1,5 @@
 from django import forms
-from now.delicious.src.front.models import Author
+from front.models import Author
 
 
 class AuthorsForm(forms.ModelForm):

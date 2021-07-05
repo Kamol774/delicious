@@ -1,5 +1,7 @@
-from dashboard.blog.views import blog_list, blog_edit, blog_create, blog_delete
-from dashboard.receipe.views import recipe_create, recipe_list, recipe_edit, recipe_delete
+from dashboard.blog.views import *
+from dashboard.receipe.views import *
+from dashboard.follower.views import *
+from dashboard.author.views import *
 from dashboard.views import *
 from django.urls import path
 
@@ -15,4 +17,14 @@ urlpatterns = [
     path('recipe/create/', recipe_create, name='recipe_create'),
     path('recipe/<int:pk>/edit/', recipe_edit, name='recipe_edit'),
     path('recipe/<int:pk>/delete/', recipe_delete, name='recipe_delete'),
+
+    path('follower/', followers_list, name='followers_list'),
+    path('follower/create/', followers_create, name='followers_create'),
+    path('follower/<int:pk>/edit/', followers_edit, name='followers_edit'),
+    path('follower/<int:pk>/delete/', followers_delete, name='followers_delete'),
+
+    path('author/', authors_list, name='authors_list'),
+    path('author/create/', authors_create, name='authors_create'),
+    path('author/<int:pk>/edit/', authors_edit, name='authors_edit'),
+    path('author/<int:pk>/delete/', authors_delete, name='authors_delete'),
 ]

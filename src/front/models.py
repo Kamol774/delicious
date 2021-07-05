@@ -39,7 +39,7 @@ class Step(models.Model):
 
 class Author(models.Model):
     name = models.CharField(max_length=100, blank=False, null=False)
-    slug = models.CharField(max_length=100, blank=False, null=False)
+    slug = models.CharField(max_length=100, blank=True, null=True)
 
 
 class Blog(models.Model):

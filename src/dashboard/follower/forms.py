@@ -1,5 +1,5 @@
 from django import forms
-from now.delicious.src.front.models import Followers
+from front.models import Followers
 
 
 class FollowersForm(forms.ModelForm):
@@ -7,5 +7,5 @@ class FollowersForm(forms.ModelForm):
         model = Followers
         fields = "__all__"
         widgets = {
-            "name": forms.TextInput(attrs={'class': 'form-control'}),
+            "email": forms.EmailInput(attrs={'class': 'form-control'}),
         }

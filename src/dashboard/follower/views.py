@@ -1,7 +1,6 @@
 from django.shortcuts import redirect, render
-
-from now.delicious.src.dashboard.follower.forms import FollowersForm
-from now.delicious.src.front.models import Followers
+from dashboard.follower.forms import FollowersForm
+from front.models import Followers
 
 
 def followers_create(request):
@@ -15,7 +14,7 @@ def followers_create(request):
         'model': model,
         'form': form
     }
-    return render(request, 'followers/form.html', ctx)
+    return render(request, 'dashboard/followers/form.html', ctx)
 
 
 def followers_list(request):
@@ -23,7 +22,7 @@ def followers_list(request):
     ctx = {
         'followerss': followerss
     }
-    return render(request, 'followers/list.html', ctx)
+    return render(request, 'dashboard/followers/list.html', ctx)
 
 
 def followers_edit(request, pk):
@@ -37,7 +36,7 @@ def followers_edit(request, pk):
         "model": model,
         "form": form
     }
-    return render(request, 'followers/form.html', ctx)
+    return render(request, 'dashboard/followers/form.html', ctx)
 
 
 def followers_delete(request, pk):
